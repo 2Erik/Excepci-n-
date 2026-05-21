@@ -18,6 +18,17 @@ public class Test {
 			
 			LOGGER.error("Contacto no valido: ",e.getMessage());
 		}
+		
+		try {
+
+	        ValidarContacto.validarTelefono("0981234567");
+	        GuardarContacto.main(args);
+	        LeerContacto.main(args);
+	        LOGGER.info("Contacto guardado correctamente");
+	    } catch (Exception e) {
+
+	        LOGGER.error("Contacto no valido", e);
+	    }
 
 	}
 

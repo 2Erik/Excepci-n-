@@ -28,10 +28,10 @@ public class LeerContacto {
 			
 			LOGGER.info("OK");
 			
-		} catch (FileNotFoundException e) {
+		} catch (IOException e) {
 			
 			LOGGER.error("No se encontro el archivo: ",e.getMessage());
-		} catch (IOException e) {
+		} catch (FileNotFoundException e) {
 
 			LOGGER.error("Error al leer el archivo: ",e.getMessage());
 		}finally {
